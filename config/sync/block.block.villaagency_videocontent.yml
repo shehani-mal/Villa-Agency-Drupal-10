@@ -1,0 +1,25 @@
+uuid: bb81db7b-75d7-45bb-b26a-ab88c0f812a3
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:cd71ef0f-c8f0-4b97-9ed2-8665607a07cc'
+  module:
+    - block_content
+  theme:
+    - villaagency
+id: villaagency_videocontent
+theme: villaagency
+region: video_content
+weight: 0
+provider: null
+plugin: 'block_content:cd71ef0f-c8f0-4b97-9ed2-8665607a07cc'
+settings:
+  id: 'block_content:cd71ef0f-c8f0-4b97-9ed2-8665607a07cc'
+  label: 'Video content'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

@@ -1,0 +1,22 @@
+uuid: 5c1a000f-129f-432c-abdc-36661bd6643a
+langcode: en
+status: false
+dependencies:
+  module:
+    - system
+  theme:
+    - villaagency
+_core:
+  default_config_hash: eYL19CLDyinGTWYQfBD1DswWzglEotE_kHnHx3AxTXM
+id: villaagency_powered
+theme: villaagency
+region: header
+weight: 0
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Powered by Drupal'
+  label_display: '0'
+  provider: system
+visibility: {  }

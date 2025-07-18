@@ -1,0 +1,9 @@
+uuid: 0c8e5a78-6166-49a2-a9f2-523ce8c20c97
+langcode: en
+status: true
+dependencies: {  }
+name: 'best details type'
+vid: best_details_type
+description: null
+weight: 0
+new_revision: false

@@ -1,0 +1,25 @@
+uuid: 3af4594b-7ab9-45bc-80eb-3bd2e4648a69
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.social-icons
+  module:
+    - system
+  theme:
+    - villaagency
+id: villaagency_socialicons
+theme: villaagency
+region: subheader
+weight: 0
+provider: null
+plugin: 'system_menu_block:social-icons'
+settings:
+  id: 'system_menu_block:social-icons'
+  label: 'Social Icons'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

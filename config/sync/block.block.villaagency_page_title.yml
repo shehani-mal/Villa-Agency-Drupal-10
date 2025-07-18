@@ -1,0 +1,20 @@
+uuid: 0b97bdcc-3294-49da-bc53-5f28d4ca1a2c
+langcode: en
+status: false
+dependencies:
+  theme:
+    - villaagency
+_core:
+  default_config_hash: 6aOgWsNTXjqrDm98TXSAjP6qd2nCijD1xw45MrnbK-Y
+id: villaagency_page_title
+theme: villaagency
+region: header
+weight: -5
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  label_display: '0'
+  provider: core
+visibility: {  }

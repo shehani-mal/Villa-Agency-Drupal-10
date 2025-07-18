@@ -1,0 +1,19 @@
+uuid: 8b8986cb-333d-46e9-94f3-48e21516d3e5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_payment_process
+    - node.type.best_deails
+id: node.best_deails.field_payment_process
+field_name: field_payment_process
+entity_type: node
+bundle: best_deails
+label: 'Payment Process'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

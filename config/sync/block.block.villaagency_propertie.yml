@@ -1,0 +1,30 @@
+uuid: 9e688bd7-3f94-4119-9065-3629dd3865c2
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:3a0420ce-c3be-49cc-b2e7-4f6b2aba630f'
+  module:
+    - block_content
+    - system
+  theme:
+    - villaagency
+id: villaagency_propertie
+theme: villaagency
+region: main_banner
+weight: 0
+provider: null
+plugin: 'block_content:3a0420ce-c3be-49cc-b2e7-4f6b2aba630f'
+settings:
+  id: 'block_content:3a0420ce-c3be-49cc-b2e7-4f6b2aba630f'
+  label: propertie
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /properties

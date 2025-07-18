@@ -1,0 +1,193 @@
+<?php
+use Drupal\Core\Template\Attribute;
+use Drupal\file\Entity\File;
+
+/**
+ * Prepares variables for views-style-villaagency-main-banner.html.twig.template.
+ */
+function template_preprocess_views_style_villaagency_main_banner(array &$variables): void {
+    $view = $variables['view'];
+    $options = $view->style_plugin->options;  // Corrected typo: should be 'options'
+    $i = 0;
+
+    $variables['default_row_class'] = $options['default_row_class'];
+    foreach ($variables['rows'] as $id => $row) {
+        $i++;
+        $field_items = $row['#row']->_entity->get('field_image_slider');  // Corrected variable name
+        
+       
+$paragraph_items = $row['#row']->_entity->get('field_location_slider')->referencedEntities();
+
+// Loop through each referenced Paragraph entity
+foreach ($paragraph_items as $paragraph) {
+    // Get the value of the 'field_location_country' field
+    $location_country = $paragraph->get('field_location_country')->getValue()[0]['value'];
+
+    // Get the value of the 'field_location_town' field
+    $location_town = $paragraph->get('field_location_town')->getValue()[0]['value'];
+      
+}
+        foreach ($field_items as $item) {
+            $file_id = $item->target_id;
+            $file = File::load($file_id);
+
+            if ($file) {
+                $uri = $file->getFileUri();
+                $realpath = \Drupal::service('file_system')->realpath($uri);
+                $path = str_replace($_SERVER['DOCUMENT_ROOT'] . '/', '', $realpath);
+
+                $variables['rows'][$id]['url'] = $path;
+            } else {
+                \Drupal::logger('villa_agency')->error('File with ID ' . $file_id . ' could not be loaded.');
+            }
+        }
+
+        $variables['rows'][$id] = [
+            'content' => $row,
+            'attributes' => new Attribute(),
+        ];
+
+        $variables['rows'][$id]['title'] = $row['#row']->_entity->getTitle();
+        $variables['rows'][$id]['url'] = $path;
+        $variables['rows'][$id]['id'] = 'item item-' . $i;
+        $variables['rows'][$id]['location_country'] = $location_country;
+        $variables['rows'][$id]['location_town'] = $location_town;
+
+        if ($row_class = $view->style_plugin->getRowClass($id)) {
+            $variables['rows'][$id]['attributes']->addClass($row_class);
+        }
+    }
+}
+
+
+
+
+/**
+ * Prepares variables for views-style-villa-agency-best-deal.html.twig template.
+ */
+function template_preprocess_views_style_villa_agency_best_deal(array &$variables): void {
+  $view = $variables['view'];
+  $options = $view->style_plugin->options;
+  $i = 0;
+  
+ $variables['default_row_class'] = $options['default_row_class'];
+  foreach ($variables['rows'] as $id => $row) {
+    $i++;
+    $field_items = $row['#row']->_entity->get('field_image_best_details'); 
+    $type = $row['#row']->_entity->get('field_deal_type'); 
+    $totalFlatSpace = $row['#row']->_entity->get('field_total_flat_space')->getValue()[0]['value']; 
+    $floorNumber = $row['#row']->_entity->get('field_floor_number')->getValue()[0]['value']; 
+    $numberOfRooms = $row['#row']->_entity->get('field_number_of_rooms')->getValue()[0]['value']; 
+    $parkingAvailable = $row['#row']->_entity->get('field_parking_available')->getValue()[0]['value']; 
+    $paymentProcess = $row['#row']->_entity->get('field_payment_process')->getValue()[0]['value']; 
+    $bestDealSummery = $row['#row']->_entity->get('body')->getValue()[0]['value'];
+    
+    foreach ($type as $item) {
+      $tid = $item->target_id;
+    }
+    $term_name = \Drupal\taxonomy\Entity\Term::load((int)$tid)->get('name')->value;
+
+   
+    foreach ($field_items as $item) {
+        $file_id = $item->target_id;
+        $file = File::load($file_id);
+
+        if ($file) {
+            $uri = $file->getFileUri();
+            $realpath = \Drupal::service('file_system')->realpath($uri);
+            $path = str_replace($_SERVER['DOCUMENT_ROOT'] . '/', '', $realpath);
+
+            $variables['rows'][$id]['url'] = $path;
+        } else {
+            \Drupal::logger('villa_agency')->error('File with ID ' . $file_id . ' could not be loaded.');
+        }
+      
+    }
+    $variables['rows'][$id] = [
+      'content' => $row,
+      'attributes' => new Attribute(),
+    ];
+
+        $variables['rows'][$id]['title'] = $row['#row']->_entity->getTitle();
+        $variables['rows'][$id]['url'] = $path;
+        $variables['rows'][$id]['id'] = 'item item-' . $i;
+        $variables['rows'][$id]['totalFlatSpace'] = $totalFlatSpace;
+        $variables['rows'][$id]['term'] = $term_name;
+        $variables['rows'][$id]['floorNumber'] = $floorNumber;
+        $variables['rows'][$id]['numberOfRooms'] = $numberOfRooms;
+        $variables['rows'][$id]['parkingAvailable'] = $parkingAvailable;
+        $variables['rows'][$id]['paymentProcess'] = $paymentProcess;
+        $variables['rows'][$id]['bestDealSummery'] = $bestDealSummery;
+        
+
+    if ($row_class = $view->style_plugin->getRowClass($id)) {
+      $variables['rows'][$id]['attributes']->addClass($row_class);
+    }
+  }
+}
+
+
+
+/**
+ * Prepares variables for views-style-villa-agency-properties-section.html.twig template.
+ */
+function template_preprocess_views_style_villa_agency_properties_section(array &$variables): void {
+  $view = $variables['view'];
+  $options = $view->style_plugin->options;
+  $i = 0;
+  
+ $variables['default_row_class'] = $options['default_row_class'];
+  foreach ($variables['rows'] as $id => $row) {
+    $i++;
+    $field_items = $row['#row']->_entity->get('field_image_best_details'); 
+    $type = $row['#row']->_entity->get('field_deal_type'); 
+    $totalFlatSpace = $row['#row']->_entity->get('field_total_flat_space')->getValue()[0]['value']; 
+    $floorNumber = $row['#row']->_entity->get('field_floor_number')->getValue()[0]['value']; 
+    $numberOfRooms = $row['#row']->_entity->get('field_number_of_rooms')->getValue()[0]['value']; 
+    $parkingAvailable = $row['#row']->_entity->get('field_parking_available')->getValue()[0]['value']; 
+    $paymentProcess = $row['#row']->_entity->get('field_payment_process')->getValue()[0]['value']; 
+    $price = $row['#row']->_entity->get('field_price')->getValue()[0]['value']; 
+
+    foreach ($type as $item) {
+      $tid = $item->target_id;
+    }
+    $term_name = \Drupal\taxonomy\Entity\Term::load((int)$tid)->get('name')->value;
+
+   
+    foreach ($field_items as $item) {
+        $file_id = $item->target_id;
+        $file = File::load($file_id);
+
+        if ($file) {
+            $uri = $file->getFileUri();
+            $realpath = \Drupal::service('file_system')->realpath($uri);
+            $path = str_replace($_SERVER['DOCUMENT_ROOT'] . '/', '', $realpath);
+
+            $variables['rows'][$id]['url'] = $path;
+        } else {
+            \Drupal::logger('villa_agency')->error('File with ID ' . $file_id . ' could not be loaded.');
+        }
+      
+    }
+    $variables['rows'][$id] = [
+      'content' => $row,
+      'attributes' => new Attribute(),
+    ];
+
+        $variables['rows'][$id]['title'] = $row['#row']->_entity->getTitle();
+        $variables['rows'][$id]['url'] = $path;
+        $variables['rows'][$id]['id'] = 'item item-' . $i;
+        $variables['rows'][$id]['totalFlatSpace'] = $totalFlatSpace;
+        $variables['rows'][$id]['term'] = $term_name;
+        $variables['rows'][$id]['floorNumber'] = $floorNumber;
+        $variables['rows'][$id]['numberOfRooms'] = $numberOfRooms;
+        $variables['rows'][$id]['parkingAvailable'] = $parkingAvailable;
+        $variables['rows'][$id]['paymentProcess'] = $paymentProcess;
+        $variables['rows'][$id]['price'] = $price;
+        
+
+    if ($row_class = $view->style_plugin->getRowClass($id)) {
+      $variables['rows'][$id]['attributes']->addClass($row_class);
+    }
+  }
+}

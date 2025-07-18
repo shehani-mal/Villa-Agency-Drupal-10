@@ -1,0 +1,6 @@
+name: 'Villaagency'
+type: module
+description: 'handling theme settings '
+package: Custom
+core_version_requirement: ^10
+

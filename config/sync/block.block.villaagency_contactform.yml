@@ -1,0 +1,25 @@
+uuid: 0c112203-31c6-460a-8832-e6b85c9b7ac0
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:bad5f555-4316-41f7-a09e-61122d9ba9b6'
+  module:
+    - block_content
+  theme:
+    - villaagency
+id: villaagency_contactform
+theme: villaagency
+region: contact_form
+weight: 0
+provider: null
+plugin: 'block_content:bad5f555-4316-41f7-a09e-61122d9ba9b6'
+settings:
+  id: 'block_content:bad5f555-4316-41f7-a09e-61122d9ba9b6'
+  label: 'contact form'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

@@ -1,0 +1,29 @@
+uuid: 6d5a7b8d-ad17-4113-9fd4-14cd0f638f8f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_deal_type
+    - node.type.best_deails
+    - taxonomy.vocabulary.best_details_type
+id: node.best_deails.field_deal_type
+field_name: field_deal_type
+entity_type: node
+bundle: best_deails
+label: 'deal type'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      best_details_type: best_details_type
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

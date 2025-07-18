@@ -1,0 +1,32 @@
+uuid: 19c07d12-5121-48aa-afd4-49683287638b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.location.field_location_country
+    - field.field.paragraph.location.field_location_town
+    - paragraphs.paragraphs_type.location
+id: paragraph.location.default
+targetEntityType: paragraph
+bundle: location
+mode: default
+content:
+  field_location_country:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_location_town:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

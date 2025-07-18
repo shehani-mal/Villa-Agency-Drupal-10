@@ -1,0 +1,30 @@
+uuid: 2cde8907-a1e3-4a81-9a2e-c39d3c701e83
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:a46b0d67-d8ac-4c5c-b343-cddd0c7a6d7f'
+  module:
+    - block_content
+    - system
+  theme:
+    - villaagency
+id: villaagency_featuredblock
+theme: villaagency
+region: featured_section
+weight: 0
+provider: null
+plugin: 'block_content:a46b0d67-d8ac-4c5c-b343-cddd0c7a6d7f'
+settings:
+  id: 'block_content:a46b0d67-d8ac-4c5c-b343-cddd0c7a6d7f'
+  label: 'Featured Block'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "<front>\r\n/property-details"

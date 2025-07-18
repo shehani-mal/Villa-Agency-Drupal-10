@@ -1,0 +1,19 @@
+uuid: d4b53299-480c-452d-9d48-ce9013b34fc5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_floor_number
+    - node.type.best_deails
+id: node.best_deails.field_floor_number
+field_name: field_floor_number
+entity_type: node
+bundle: best_deails
+label: 'Floor number'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

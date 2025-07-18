@@ -1,0 +1,25 @@
+uuid: 7e757123-c523-4936-9920-e6cb792a8787
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:ff87fa99-0be2-433a-8083-f850ff5a9dc8'
+  module:
+    - block_content
+  theme:
+    - villaagency
+id: villaagency_contactsection
+theme: villaagency
+region: contact_section
+weight: 0
+provider: null
+plugin: 'block_content:ff87fa99-0be2-433a-8083-f850ff5a9dc8'
+settings:
+  id: 'block_content:ff87fa99-0be2-433a-8083-f850ff5a9dc8'
+  label: 'contact section '
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

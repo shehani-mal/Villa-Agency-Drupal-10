@@ -1,0 +1,19 @@
+name: villa-demo
+type: php:8.3
+recipe: drupal10
+config:
+  webroot: web
+
+services:
+  phpmyadmin:
+    type: phpmyadmin
+    hosts:
+      - database
+    # Option to expose phpMyAdmin to localhost (uncomment if desired):
+    # ports:
+    #   - "8080:80"
+
+tooling:
+  drush:
+    service: appserver
+    cmd: vendor/bin/drush

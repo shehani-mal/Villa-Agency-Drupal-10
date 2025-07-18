@@ -1,0 +1,18 @@
+uuid: b27779f8-8f02-457e-8ec2-53fac5d255aa
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: 'Best Deails'
+type: best_deails
+description: null
+help: null
+new_revision: true
+preview_mode: 1
+display_submitted: false

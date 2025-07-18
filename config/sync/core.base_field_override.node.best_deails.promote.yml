@@ -1,0 +1,22 @@
+uuid: 692370d9-a3d5-4857-9157-1f4e381f02d9
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.best_deails
+id: node.best_deails.promote
+field_name: promote
+entity_type: node
+bundle: best_deails
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

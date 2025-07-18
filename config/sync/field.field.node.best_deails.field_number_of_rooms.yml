@@ -1,0 +1,19 @@
+uuid: f76f580a-0eed-4af4-bb80-08d3cf5cc853
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_number_of_rooms
+    - node.type.best_deails
+id: node.best_deails.field_number_of_rooms
+field_name: field_number_of_rooms
+entity_type: node
+bundle: best_deails
+label: 'Number of rooms'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,25 @@
+uuid: cb6606ec-0d63-4849-9de0-6deda0f7e038
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:2b5d1f06-18e9-40fb-b149-da7e7f8e1b09'
+  module:
+    - block_content
+  theme:
+    - villaagency
+id: villaagency_contactmap
+theme: villaagency
+region: contact_map
+weight: 0
+provider: null
+plugin: 'block_content:2b5d1f06-18e9-40fb-b149-da7e7f8e1b09'
+settings:
+  id: 'block_content:2b5d1f06-18e9-40fb-b149-da7e7f8e1b09'
+  label: 'contact map'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

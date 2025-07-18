@@ -1,0 +1,23 @@
+uuid: 0f43aa9e-815e-4eac-8045-d341373eea1a
+langcode: en
+status: false
+dependencies:
+  module:
+    - search
+  theme:
+    - villaagency
+_core:
+  default_config_hash: yEBET0cqDbk8dkWzaJw-8CKft0961VBflsISoSR6Lj8
+id: villaagency_search_form_narrow
+theme: villaagency
+region: subheader
+weight: -4
+provider: null
+plugin: search_form_block
+settings:
+  id: search_form_block
+  label: 'Search form (narrow)'
+  label_display: '0'
+  provider: search
+  page_id: ''
+visibility: {  }

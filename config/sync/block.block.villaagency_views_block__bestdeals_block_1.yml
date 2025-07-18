@@ -1,0 +1,24 @@
+uuid: b60cf800-42f5-4d29-aac2-3c8746f16fb3
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.bestdeals
+  module:
+    - views
+  theme:
+    - villaagency
+id: villaagency_views_block__bestdeals_block_1
+theme: villaagency
+region: best_deal
+weight: 0
+provider: null
+plugin: 'views_block:bestdeals-block_1'
+settings:
+  id: 'views_block:bestdeals-block_1'
+  label: ''
+  label_display: '0'
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility: {  }

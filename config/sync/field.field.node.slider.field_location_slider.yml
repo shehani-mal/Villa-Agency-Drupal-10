@@ -1,0 +1,31 @@
+uuid: 281c1941-3049-4b7f-a505-a0cc340f341f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_location_slider
+    - node.type.slider
+    - paragraphs.paragraphs_type.location
+  module:
+    - entity_reference_revisions
+id: node.slider.field_location_slider
+field_name: field_location_slider
+entity_type: node
+bundle: slider
+label: Location
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      location: location
+    negate: 0
+    target_bundles_drag_drop:
+      location:
+        weight: 2
+        enabled: true
+field_type: entity_reference_revisions

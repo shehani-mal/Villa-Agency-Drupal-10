@@ -1,0 +1,19 @@
+uuid: 63a88153-bf0f-4a64-b28c-904c86e2916b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_location_town
+    - paragraphs.paragraphs_type.location
+id: paragraph.location.field_location_town
+field_name: field_location_town
+entity_type: paragraph
+bundle: location
+label: 'location town'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

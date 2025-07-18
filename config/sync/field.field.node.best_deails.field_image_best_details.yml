@@ -1,0 +1,38 @@
+uuid: 1db4bda9-1238-4259-a17d-848d48330c1f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_image_best_details
+    - node.type.best_deails
+  module:
+    - image
+id: node.best_deails.field_image_best_details
+field_name: field_image_best_details
+entity_type: node
+bundle: best_deails
+label: image
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'png gif jpg jpeg webp'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: ''
+  alt_field: true
+  alt_field_required: true
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+field_type: image

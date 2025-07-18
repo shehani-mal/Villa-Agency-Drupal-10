@@ -1,0 +1,25 @@
+uuid: f6ebf586-b643-4177-9999-187b01754fac
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:dbd1ec4c-3738-4172-ad9a-e1168154ec80'
+  module:
+    - block_content
+  theme:
+    - villaagency
+id: villaagency_funfacts
+theme: villaagency
+region: fun_facts
+weight: 0
+provider: null
+plugin: 'block_content:dbd1ec4c-3738-4172-ad9a-e1168154ec80'
+settings:
+  id: 'block_content:dbd1ec4c-3738-4172-ad9a-e1168154ec80'
+  label: 'fun facts'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

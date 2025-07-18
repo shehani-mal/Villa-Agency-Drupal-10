@@ -1,0 +1,30 @@
+uuid: 877fde53-36e1-461b-bfdd-61fc85355e05
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:02046fd2-a8c2-427d-bdef-23e61f313e4c'
+  module:
+    - block_content
+    - system
+  theme:
+    - villaagency
+id: villaagency_propertydetails
+theme: villaagency
+region: main_banner
+weight: 0
+provider: null
+plugin: 'block_content:02046fd2-a8c2-427d-bdef-23e61f313e4c'
+settings:
+  id: 'block_content:02046fd2-a8c2-427d-bdef-23e61f313e4c'
+  label: property-details
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /property-details
