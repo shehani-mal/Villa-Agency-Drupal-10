@@ -24,3 +24,12 @@ This is a Drupal 10 demo website called **Villa Agency**, built to demonstrate t
 ---
 
 _This project is part of my portfolio to demonstrate my Drupal front-end and site-building skills._
+
+## Project Preview
+
+### Villa Agency Screenshots
+
+![Villa Agency 1](screenshots/villa-1.png)
+![Villa Agency 2](screenshots/villa-2.png)
+![Villa Agency 3](screenshots/villa-3.png)
+![Villa Agency 4](screenshots/villa-4.png)
